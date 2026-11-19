@@ -1,56 +1,113 @@
-# RAG UI Testing
+# 🚀 RAG UI & API Automated Testing Portfolio
 
-## Project Structure
-- `test_basic.py` - Basic Playwright pytest tests for RAG UI functionality
-- `conftest.py` - Pytest fixtures (browser, page, rag_page)
-- `requirements.txt` - Python dependencies
-- `explore.py` - Initial page exploration script
-- `explore_chat.py` - Chat interaction exploration
-- `explore_deep.py` - Deep structure exploration
-- `fetch_js.py` - JS bundle analysis
-- `screenshot.png` - Screenshot from exploration
-- `deep_explore.png` - Deep exploration screenshot
-- `chat_test.png` - Chat test screenshot
-- `screenshot.png` - General screenshot
+[![RAG UI Automated Tests](https://github.com/D-dataguy/RAG_test/actions/workflows/tests.yml/badge.svg)](https://github.com/D-dataguy/RAG_test/actions/workflows/tests.yml)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
+[![Pytest](https://img.shields.io/badge/Pytest-8.4%2B-orange.svg)](https://docs.pytest.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-1.55%2B-green.svg)](https://playwright.dev/python/)
 
-## Testing Approach
+A professional, recruiter-ready test automation framework for testing **Retrieval-Augmented Generation (RAG)** UI and AI chatbot applications. Built using **Python**, **Playwright**, and **Pytest**, implementing industry-standard architecture patterns including **Page Object Model (POM)** and **Data-Driven Testing**.
 
-This project tests the RAG (Retrieval-Augmented Generation) UI at https://rahulshettyacademy.com/rag-ui/ using **Playwright + pytest**.
+---
 
-### Page Overview
-The page is a ChatGPT-like interface built with React (Vite) that:
-- Uses OpenAI API (`https://api.openai.com/v1/chat/completions`)
-- Proxies through `https://rahulshettyacademy.com/rag-llm`
-- Has a `CHATGPT_SECRET_KEY` environment variable
-- Contains example questions about online courses (Postman, Selenium, Java)
+## 🏗️ Framework Architecture
 
-### Tests Included
-1. `test_page_title` - Verifies the "RAG-LLM" heading is visible
-2. `test_clear_button` - Verifies the "Clear conversation" button exists and is enabled
-3. `test_example_buttons` - Verifies at least 3 example buttons exist (Postman, Selenium, Java)
-4. `test_text_input` - Verifies the textbox exists, is enabled, and can receive input
-5. `test_send_button` - Verifies the send button exists and is enabled
-6. `test_send_message` - Verifies sending a message clears the input and generates a response
-
-### Running Tests
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run all tests
-python -m pytest -v
-
-# Run with HTML report
-python -m pytest --html=report.html -v
+```text
+RAG_test/
+│
+├── config/
+│   └── settings.py          # Centralized configuration management
+│
+├── pages/
+│   └── rag_page.py          # Page Object Model (POM) for RAG UI encapsulation
+│
+├── tests/
+│   ├── test_rag.py          # Core UI & interaction test cases
+│   ├── test_data_driven.py  # Parameterized data-driven test cases
+│   └── test_api.py          # Backend RAG endpoint validation
+│
+├── test_data/
+│   └── questions.json       # Externalized test queries and expected keywords
+│
+├── utils/
+│   └── logger.py            # Structured execution logging utility
+│
+├── reports/                 # Test execution reports
+├── screenshots/             # Auto-captured failure screenshots
+├── logs/                    # Execution logs
+│
+├── .github/
+│   └── workflows/
+│       └── tests.yml        # GitHub Actions CI/CD pipeline configuration
+│
+├── conftest.py              # Pytest fixtures and failure hooks
+├── pytest.ini               # Pytest configurations
+├── requirements.txt         # Project dependencies
+└── README.md                # Project documentation
 ```
 
-### Key Testing Patterns Used
-- **`get_by_role()`** - For robust selectors (headings, textboxes, buttons)
-- **`locator(:has-text())`** - For text-based button/element location
-- **`wait_for_timeout()`** - For React rendering delays (consider replacing with proper wait conditions for production)
-- **Session-scoped browser** - Shared browser instance for efficiency
+---
 
-### Notes
-- The page dynamically loads content via JavaScript, so tests include appropriate waits
-- The RAG system queries a course database and returns AI-generated answers
-- All tests use headless=True by default (set headless=False in conftest for debugging)
+## 🛠️ Key Technical Competencies Demonstrated
+
+| Skill / Pattern | Implementation Details |
+| :--- | :--- |
+| **Page Object Model (POM)** | Encapsulates selectors and actions in `pages/rag_page.py` for maintainability. |
+| **Robust Locators** | Uses accessible role-based selectors (`get_by_role`, `get_by_text`) instead of brittle CSS classes. |
+| **Data-Driven Testing** | Parameterized test suites loading externalized queries from `test_data/questions.json`. |
+| **API Testing** | Validates backend endpoint status, headers, and payload responses using Playwright API requests. |
+| **CI/CD Pipeline** | Automated GitHub Actions workflow (`tests.yml`) running tests on every push/PR with artifact retention. |
+| **Failure Diagnostics** | Custom hooks in `conftest.py` capturing full-page screenshots and execution logs upon test failure. |
+
+---
+
+## 🚀 Getting Started & Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/D-dataguy/RAG_test.git
+cd RAG_test
+```
+
+### 2. Create a Virtual Environment & Install Dependencies
+```bash
+python -m venv .venv
+# On Windows:
+.venv\Scripts\activate
+# On macOS/Linux:
+# source .venv/bin/activate
+
+pip install -r requirements.txt
+python -m playwright install --with-deps
+```
+
+---
+
+## 🏃 Running the Test Suite
+
+Run all UI, API, and Data-Driven tests in headless mode:
+```bash
+python -m pytest -v
+```
+
+Run specific test modules:
+```bash
+# Run UI tests
+python -m pytest tests/test_rag.py -v
+
+# Run Data-Driven tests
+python -m pytest tests/test_data_driven.py -v
+
+# Run API endpoint tests
+python -m pytest tests/test_api.py -v
+```
+
+---
+
+## 📊 CI/CD Automation (GitHub Actions)
+
+This repository is integrated with **GitHub Actions**. Every push or pull request automatically triggers:
+1. Environment setup (Python 3.11 + Playwright browsers).
+2. Execution of the complete test suite (`pytest -v`).
+3. Upload of test failure screenshots as downloadable artifacts if any test fails.
+
+View workflow runs under the [Actions tab](https://github.com/D-dataguy/RAG_test/actions).
