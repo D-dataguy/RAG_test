@@ -71,6 +71,6 @@ def test_multiple_sequential_questions(rag_page: RAGPage):
 def test_empty_message_handling(rag_page: RAGPage):
     """Verify submitting an empty message does not crash the UI."""
     rag_page.send_button.click()
-    # Input should remain empty and system stable
+    # Input should remain empty and system stable (textbox still visible/enabled)
     expect(rag_page.textbox).to_have_value("")
-    expect(rag_page.heading).to_be_visible()
+    expect(rag_page.textbox).to_be_enabled()

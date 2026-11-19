@@ -1,0 +1,75 @@
+[2026-11-19 20:49:48,570] [INFO] [conftest]: Launching browser session...
+[2026-11-19 20:49:50,845] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data0]
+[2026-11-19 20:50:09,032] [INFO] [test_rag_datadriven]: Executing query: 'What is Retrieval Augmented Generation?' expecting keyword: 'retrieval'
+[2026-11-19 20:50:11,458] [INFO] [test_rag_datadriven]: Successfully validated query: 'What is Retrieval Augmented Generation?'
+[2026-11-19 20:50:11,461] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data0]
+[2026-11-19 20:50:11,710] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data1]
+[2026-11-19 20:50:19,123] [INFO] [test_rag_datadriven]: Executing query: 'What can we learn from Postman?' expecting keyword: 'postman'
+[2026-11-19 20:50:21,376] [INFO] [test_rag_datadriven]: Successfully validated query: 'What can we learn from Postman?'
+[2026-11-19 20:50:21,382] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data1]
+[2026-11-19 20:50:21,744] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data2]
+[2026-11-19 20:50:52,343] [INFO] [test_rag_datadriven]: Executing query: 'How many downloadable resources does Selenium Python have?' expecting keyword: 'selenium'
+[2026-11-19 20:50:54,759] [INFO] [test_rag_datadriven]: Successfully validated query: 'How many downloadable resources does Selenium Python have?'
+[2026-11-19 20:50:54,764] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data2]
+[2026-11-19 20:50:55,107] [INFO] [conftest]: Browser session closed.
+[2026-11-19 21:01:40,147] [INFO] [conftest]: Launching browser session...
+[2026-11-19 21:01:41,477] [INFO] [conftest]: Starting test: test_page_title[chromium]
+[2026-11-19 21:01:53,212] [INFO] [conftest]: Finished test: test_page_title[chromium]
+[2026-11-19 21:01:53,460] [INFO] [conftest]: Starting test: test_clear_conversation[chromium]
+[2026-11-19 21:02:05,944] [INFO] [conftest]: Finished test: test_clear_conversation[chromium]
+[2026-11-19 21:02:06,239] [INFO] [conftest]: Starting test: test_text_input_and_assertion_fix[chromium]
+[2026-11-19 21:02:18,331] [INFO] [conftest]: Finished test: test_text_input_and_assertion_fix[chromium]
+[2026-11-19 21:02:18,613] [INFO] [conftest]: Starting test: test_send_message_and_response[chromium]
+[2026-11-19 21:02:34,149] [INFO] [conftest]: Finished test: test_send_message_and_response[chromium]
+[2026-11-19 21:02:34,409] [INFO] [conftest]: Starting test: test_example_question_postman[chromium]
+[2026-11-19 21:02:45,904] [INFO] [conftest]: Finished test: test_example_question_postman[chromium]
+[2026-11-19 21:02:46,153] [INFO] [conftest]: Starting test: test_example_question_python_selenium[chromium]
+[2026-11-19 21:02:59,086] [INFO] [conftest]: Finished test: test_example_question_python_selenium[chromium]
+[2026-11-19 21:02:59,259] [INFO] [conftest]: Starting test: test_multiple_sequential_questions[chromium]
+[2026-11-19 21:03:11,537] [INFO] [conftest]: Finished test: test_multiple_sequential_questions[chromium]
+[2026-11-19 21:03:11,854] [INFO] [conftest]: Starting test: test_empty_message_handling[chromium]
+[2026-11-19 21:03:29,231] [ERROR] [conftest]: Test failed! Screenshot saved to C:\Users\HP\Desktop\RAG_testing\screenshots\test_empty_message_handling[chromium].png
+[2026-11-19 21:03:29,232] [INFO] [conftest]: Finished test: test_empty_message_handling[chromium]
+[2026-11-19 21:03:29,398] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data0]
+[2026-11-19 21:03:39,705] [INFO] [test_rag_datadriven]: Executing query: 'What is Retrieval Augmented Generation?' expecting keyword: 'retrieval'
+[2026-11-19 21:03:41,883] [INFO] [test_rag_datadriven]: Successfully validated query: 'What is Retrieval Augmented Generation?'
+[2026-11-19 21:03:41,886] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data0]
+[2026-11-19 21:03:42,113] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data1]
+[2026-11-19 21:03:50,800] [INFO] [test_rag_datadriven]: Executing query: 'What can we learn from Postman?' expecting keyword: 'postman'
+[2026-11-19 21:03:52,962] [INFO] [test_rag_datadriven]: Successfully validated query: 'What can we learn from Postman?'
+[2026-11-19 21:03:52,966] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data1]
+[2026-11-19 21:03:53,201] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data2]
+[2026-11-19 21:04:00,811] [INFO] [test_rag_datadriven]: Executing query: 'How many downloadable resources does Selenium Python have?' expecting keyword: 'selenium'
+[2026-11-19 21:04:02,982] [INFO] [test_rag_datadriven]: Successfully validated query: 'How many downloadable resources does Selenium Python have?'
+[2026-11-19 21:04:02,987] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data2]
+[2026-11-19 21:04:03,260] [INFO] [conftest]: Browser session closed.
+[2026-11-19 21:04:39,183] [INFO] [conftest]: Launching browser session...
+[2026-11-19 21:04:40,497] [INFO] [conftest]: Starting test: test_page_title[chromium]
+[2026-11-19 21:04:50,853] [INFO] [conftest]: Finished test: test_page_title[chromium]
+[2026-11-19 21:04:51,034] [INFO] [conftest]: Starting test: test_clear_conversation[chromium]
+[2026-11-19 21:05:03,925] [INFO] [conftest]: Finished test: test_clear_conversation[chromium]
+[2026-11-19 21:05:04,106] [INFO] [conftest]: Starting test: test_text_input_and_assertion_fix[chromium]
+[2026-11-19 21:05:10,835] [INFO] [conftest]: Finished test: test_text_input_and_assertion_fix[chromium]
+[2026-11-19 21:05:10,993] [INFO] [conftest]: Starting test: test_send_message_and_response[chromium]
+[2026-11-19 21:05:17,650] [INFO] [conftest]: Finished test: test_send_message_and_response[chromium]
+[2026-11-19 21:05:17,896] [INFO] [conftest]: Starting test: test_example_question_postman[chromium]
+[2026-11-19 21:05:36,957] [INFO] [conftest]: Finished test: test_example_question_postman[chromium]
+[2026-11-19 21:05:37,231] [INFO] [conftest]: Starting test: test_example_question_python_selenium[chromium]
+[2026-11-19 21:05:59,195] [INFO] [conftest]: Finished test: test_example_question_python_selenium[chromium]
+[2026-11-19 21:05:59,379] [INFO] [conftest]: Starting test: test_multiple_sequential_questions[chromium]
+[2026-11-19 21:06:26,528] [INFO] [conftest]: Finished test: test_multiple_sequential_questions[chromium]
+[2026-11-19 21:06:26,950] [INFO] [conftest]: Starting test: test_empty_message_handling[chromium]
+[2026-11-19 21:06:37,366] [INFO] [conftest]: Finished test: test_empty_message_handling[chromium]
+[2026-11-19 21:06:37,539] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data0]
+[2026-11-19 21:06:45,580] [INFO] [test_rag_datadriven]: Executing query: 'What is Retrieval Augmented Generation?' expecting keyword: 'retrieval'
+[2026-11-19 21:06:47,758] [INFO] [test_rag_datadriven]: Successfully validated query: 'What is Retrieval Augmented Generation?'
+[2026-11-19 21:06:47,763] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data0]
+[2026-11-19 21:06:48,111] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data1]
+[2026-11-19 21:06:52,087] [INFO] [test_rag_datadriven]: Executing query: 'What can we learn from Postman?' expecting keyword: 'postman'
+[2026-11-19 21:06:54,254] [INFO] [test_rag_datadriven]: Successfully validated query: 'What can we learn from Postman?'
+[2026-11-19 21:06:54,258] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data1]
+[2026-11-19 21:06:54,596] [INFO] [conftest]: Starting test: test_data_driven_rag_queries[chromium-query_data2]
+[2026-11-19 21:06:58,459] [INFO] [test_rag_datadriven]: Executing query: 'How many downloadable resources does Selenium Python have?' expecting keyword: 'selenium'
+[2026-11-19 21:07:00,798] [INFO] [test_rag_datadriven]: Successfully validated query: 'How many downloadable resources does Selenium Python have?'
+[2026-11-19 21:07:00,802] [INFO] [conftest]: Finished test: test_data_driven_rag_queries[chromium-query_data2]
+[2026-11-19 21:07:01,209] [INFO] [conftest]: Browser session closed.

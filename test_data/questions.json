@@ -1,0 +1,16 @@
+{
+  "rag_queries": [
+    {
+      "question": "What is Retrieval Augmented Generation?",
+      "expected_keyword": "retrieval"
+    },
+    {
+      "question": "What can we learn from Postman?",
+      "expected_keyword": "postman"
+    },
+    {
+      "question": "How many downloadable resources does Selenium Python have?",
+      "expected_keyword": "selenium"
+    }
+  ]
+}
