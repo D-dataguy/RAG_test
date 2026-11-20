@@ -8,9 +8,11 @@ from utils.logger import get_logger
 
 logger = get_logger("test_rag_datadriven")
 
+
 def load_test_data():
-    """Load queries from JSON file."""
-    data_path = os.path.abspath("test_data/questions.json")
+    """Load queries from JSON file using path relative to this file."""
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    data_path = os.path.join(base_dir, "test_data", "questions.json")
     with open(data_path, "r", encoding="utf-8") as f:
         return json.load(f)["rag_queries"]
 
