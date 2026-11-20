@@ -1,7 +1,7 @@
-"""Enhanced Pytest configuration with logging, settings, and auto-screenshots on failure."""
+"""Pytest configuration using pytest-playwright's built-in fixtures."""
 import os
 import pytest
-from playwright.sync_api import sync_playwright, Page
+from playwright.sync_api import Page, expect
 from pages.rag_page import RAGPage
 from config.settings import BASE_URL, HEADLESS, TIMEOUT
 from utils.logger import get_logger
@@ -10,34 +10,22 @@ logger = get_logger("conftest")
 
 
 @pytest.fixture(scope="session")
-def browser_instance():
-    """Create a shared browser instance."""
+def browser(playwright):
+    """Create a shared browser instance using pytest-playwright."""
     logger.info("Launching browser session...")
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=HEADLESS)
-        yield browser
-        browser.close()
+    browser = playwright.chromium.launch(headless=HEADLESS)
+    yield browser
+    browser.close()
     logger.info("Browser session closed.")
 
 
 @pytest.fixture
-def page(browser_instance, request) -> Page:
-    """Create a fresh browser context and page, with automatic failure screenshot capture."""
-    context = browser_instance.new_context()
-    context.set_default_timeout(TIMEOUT)
+def page(browser) -> Page:
+    """Create a fresh page for each test."""
+    context = browser.new_context()
     page = context.new_page()
-    
-    logger.info(f"Starting test: {request.node.name}")
+    page.set_default_timeout(TIMEOUT)
     yield page
-    
-    # Check if test failed
-    if request.node.rep_call.failed:
-        os.makedirs("screenshots", exist_ok=True)
-        screenshot_path = os.path.abspath(f"screenshots/{request.node.name}.png")
-        page.screenshot(path=screenshot_path, full_page=True)
-        logger.error(f"Test failed! Screenshot saved to {screenshot_path}")
-    
-    logger.info(f"Finished test: {request.node.name}")
     context.close()
 
 
